@@ -1,0 +1,141 @@
+/* Base Selector Style */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  line-height: 24px;
+}
+
+:root {
+  /* This is where the color pallete lies
+    as of now, i do not know any other 
+    addition asides this
+
+    From what i can deduce:
+    it may likely move to another section called global.css
+    but for now, it is better here
+
+    Not only color exists here but fonts too can be added here
+
+    Better to take it one step at a time.
+  */
+
+  --primary-color: #666;
+  --secondary-color: #f5f6fa;
+  /* The below will go into the diff ones */
+  --button-color: #000e1f;
+  --light-color: #f8f9fa;
+  --dark-color: #343a40;
+  --white-color: #fff;
+  --black-color: #000;
+  --bg-color: #f5f6fa;
+
+  /* fonts */
+  --font-lato: Lato;
+  --font-optima: Optima;
+
+  /* font-size
+    Using rem and instead of px for users
+    consideration, so i will be calculating
+    it
+    
+    reference: https://stackoverflow.com/questions/11799236/should-i-use-px-or-rem-value-units-in-my-css
+    
+    1rem = 16px
+    and I want it to be 
+    1rem to be similar to the px
+    therefore i use percentage in order to
+    do that
+    
+    16 * X = 1
+    X = 1/16
+    X = 0.0625
+    X = 6.25%
+  */
+  /* font-size: 6.25%; */
+  /* and have 1rem equal 1px */
+  font-size: 62.5%;
+  /* recommended: 1rem equal 10px */
+}
+
+body {
+  font-family: "Optima", sans-serif;
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  background: var(--bg-color);
+  text-rendering: optimizeLegibility;
+  overflow-x: auto;
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  /* height: auto; */
+}
+
+.font-OptimaBold {
+  font-family: "Optima", sans-serif;
+  font-weight: bold;
+}
+
+/* Navbar */
+.navbar {
+  /* also the header */
+  background: var(--dark-color);
+  font-size: 24px;
+  font-size: 2.4rem;
+  width: 100%;
+  /* position: relative; */
+  
+  /* overflow: hidden; */
+  text-align: left;
+  font-family: var(--font-lato);
+}
+
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  padding: 0px 32px;
+}
+
+.navbar .container h3 {
+  justify-content: center;
+  align-items: center;
+  padding: 30px 0;
+}
+
+.vivant {
+  color: var(--primary-color);
+}
+
+.navbar .main-menu ul {
+  display: flex;
+  margin: 0 auto;
+  
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 60px;
+}
+
+.navbar .main-menu ul li a {
+  padding: 10px 10px;
+  display: block;
+  font-weight: 600;
+  font-size: 1.5rem;
+  transition: 0.3s;
+  position: relative;
+}
